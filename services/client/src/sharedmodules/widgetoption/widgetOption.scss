@@ -1,0 +1,30 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mediaQueries.scss';
+.widgetContainer{
+    display: grid;
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr));
+    font-family: 'JosefinSans-Regular';
+    &__widget{
+        background: style(white-1);
+        text-align: center;
+        padding: 1rem 1rem;
+        border-radius: 0.8rem 0.8rem;
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.15);
+        flex-grow: 1;
+        height: 7rem;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 1.6rem;
+        color:style(primary);
+        border:0.1rem solid #c1c1c1;
+        cursor: pointer;
+        color:style(primary)
+    }
+    &__selected{
+        background-color: #8CB33F;
+        color:#fff;
+    }
+}

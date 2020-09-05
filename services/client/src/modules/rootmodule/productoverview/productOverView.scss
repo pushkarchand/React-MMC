@@ -1,0 +1,28 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mediaQueries.scss';
+.productoverViewContainer{
+    display: flex;
+    flex-direction: column;
+    padding:0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    &__filter{
+        padding:0.5rem;
+        width:100%;
+    }
+    &__filterbtn{
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 0;
+    }
+    .MuiInputLabel-animated,input{
+        font-size: 1.4rem;
+    }
+    @include mobile {
+        &__filter{
+            padding:1rem 2rem;
+        }
+    }
+}

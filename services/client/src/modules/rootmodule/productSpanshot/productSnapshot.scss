@@ -1,0 +1,99 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mediaQueries.scss';
+
+
+.snapshotContainer{
+    display: grid;
+    grid-gap: 2rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit,minmax(330px,1fr));
+    font-family: 'JosefinSans-Regular';
+    &__widget{
+        background-image: style(gradient-1);
+        padding: 3rem 0 1rem 0;
+        border-radius: 0.8rem 0.8rem;
+        box-shadow: 4px 4px 15px rgba(#000, 0.15);;
+        flex-grow: 1;
+        position: relative;
+        height:24rem;
+        &__remove{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            font-size: 2rem !important;
+            color: style(white-1);
+            cursor: pointer;
+        }
+    }
+    &__addmore{
+        background-image: style(gradient-1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:0;
+        cursor: pointer;
+        background-color: style(primary);
+        height:24rem;
+        &__icon{
+            font-size: 3.5rem !important;
+            color:style(white-1);
+        }
+    }
+}
+
+.ribbon{
+    background: style(secondary);
+    height: 30px;
+    width: auto;
+    display: inline-block;
+    position: absolute;
+    color: #FFF;
+    left: 0;
+    line-height: 30px;
+    padding: 0px 20px;
+    top: 0;
+    font-size:1.4rem;
+  }
+  
+  .ribbon:after{
+    content:"";
+    height:0;
+    width: 0;
+    top:0px;
+    right:-30px;
+    position: absolute;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid style(secondary);
+  }
+  
+  .ribbon:before{
+    content: "";
+    height: 0;
+    width: 0;
+    top: 0px;
+    right: -30px;
+    position: absolute;
+    border-style: solid;
+    border-left: 27px solid transparent;
+    border-right: 27px solid transparent;
+    border-top: 27px solid style(secondary);
+  }
+
+.snapshotwidget{
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 2rem;
+    align-items: center;
+    color:style(primary);
+    &__icon{
+        font-size: 2rem !important;
+        cursor: pointer;
+        padding: 0 1rem;
+    }
+    &__title{
+        font-size: 1.4rem;
+        font-family: "JosefinSans-Regular";
+        padding-top: 0.5rem;
+    }
+}

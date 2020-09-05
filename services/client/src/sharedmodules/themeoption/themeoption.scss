@@ -1,0 +1,31 @@
+@import '../../assets/styles/variables';
+@import '../../assets/styles/mediaQueries.scss';
+.themeoption{
+    list-style: none;
+    padding: 0;
+    &__item{
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        width:10rem;
+        &__shape{
+            height:1.5rem;
+            width:1.5rem;
+            border-radius: 50%;
+        }
+        &__title{
+            font-size:1.4rem;
+        }
+        &:hover{
+            background: #f8fcf7;
+        }
+    }
+}
+
+.themeoptioniocn{
+    font-size: 2rem !important;
+    cursor: pointer;
+    color:#4141f9;
+}

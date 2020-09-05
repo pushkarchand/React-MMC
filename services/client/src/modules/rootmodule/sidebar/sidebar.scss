@@ -1,0 +1,61 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mediaQueries.scss';
+.sidebarcontainer{
+    position: relative;
+    width:20rem;
+    background: style(primary);
+    height:100%;
+    transition: width 0.4s;
+    &__mainmenulist{
+        list-style: none;
+        padding: 2rem 0 0 0;
+        width: 100%;
+        color: #fff;
+            &__item{
+                font-size: 1.4rem;
+                padding: 1rem 1.4rem;
+                display: flex;
+                cursor: pointer;
+                position: relative;
+                &__logo{
+                    font-size: 2rem !important;
+                }
+                &__title{
+                    display: inline-block;
+                    margin: 0;
+                    padding-left: 1rem;
+                    width:180px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    max-width: 100%;
+                }
+            &:hover{
+                background-color:style(active);
+            }
+        }
+        &__closeitem{
+            position: relative;
+            &__close{
+                position: absolute;
+                right:2rem;
+                top:-2rem;
+                font-size: 2rem !important;
+                cursor: pointer;
+            }
+        }
+    }
+    // &:hover{
+    //     width:200px;
+    //     .sidebarcontainer__mainmenulist__item__title{
+    //         display: inline-block;
+    //         margin: 0;
+    //         padding-left: 1rem;
+    //         width:180px;
+    //         overflow: hidden;
+    //         text-overflow: ellipsis;
+    //         white-space: nowrap;
+    //         max-width: 100%;
+    //     }
+    // }
+}

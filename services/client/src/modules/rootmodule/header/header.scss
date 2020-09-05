@@ -1,0 +1,43 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mediaQueries.scss';
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-family: 'JosefinSans-Bold';
+    align-items: center;;
+    &__logo{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color:style(primary);
+        h1{
+            font-size: 4rem;
+            font-weight: 600;
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            font-size: 0.8rem;
+            padding: 0;
+            margin: 0;
+        }
+    }
+    &__title{
+        font-size: 2rem;
+        color:style(primary);
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        width: 20%;
+        &__menu{
+            font-size: 2rem !important;
+            cursor: pointer;
+        }
+        @include mobile {
+            width: 55%;
+        }
+    }
+}

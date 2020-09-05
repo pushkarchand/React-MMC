@@ -1,0 +1,15 @@
+@import './root.scss';
+$colors: (
+    primary: var(--data_color_primary),
+    secondary:var(--data_color_secondary),
+    active:var(--data_color_active),
+    white-1: var(--data_color_white_1),
+    black-1:var(--data_color_black_1),
+    base-fontSize:var(--data_base_font_size),
+    gradient-1:var(--data_base_gradient_1)
+);
+
+@function style($color-name) {
+    @return map-get($colors, $color-name)
+}
+

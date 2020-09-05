@@ -1,0 +1,41 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mediaQueries.scss';
+.productDetails{
+    height:100%;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'JosefinSans-Regular';
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        padding: 0.5rem 1rem;
+        align-items: center;
+        &__left{
+            font-size: 1.4rem;
+            color:style(primary)
+        }
+        &__right{
+            flex-basis: 10%;
+            display: flex;
+            justify-content: space-evenly;
+            &__icon{
+                font-size: 2rem !important;
+                cursor: pointer;
+            }
+        }
+    }
+    &__body{
+        width:100%;
+        height:100%;
+        &__iframe{
+            width:100%;
+            height:100%;
+        }
+    }
+}
+
+.activeicon{
+    color:style(secondary)
+}

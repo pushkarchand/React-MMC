@@ -1,0 +1,38 @@
+.App{
+  height:100%;
+  width:100%;
+  display: flex;
+}
+
+.aside{
+  display: flex;
+  flex-direction:column;
+  height:100%;
+  width: 100%;
+}
+
+ .sidebar{
+  display: flex; 
+  width:20rem;
+  max-width: 20rem;
+  z-index: 9999;
+  height:100%;
+  position: fixed;
+  top:0;
+  left:0;
+  animation: yourAnimation 0.3s forwards 0s ease-out;
+}
+
+@keyframes yourAnimation{
+  0%{
+      transform: translateX(-100%) translateY(0);
+      }
+  100%{
+      transform: translateX(0) translateY(0);
+      }
+}
+
+
+.Toastify__toast-container {
+  font-size: 1.4rem;
+}

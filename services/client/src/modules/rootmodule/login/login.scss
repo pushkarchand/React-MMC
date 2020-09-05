@@ -1,0 +1,154 @@
+@import '../../../assets/styles/variables';
+@import '../../../assets/styles/mediaQueries.scss';
+
+#bg {
+    clip-path: polygon(72% 0, 100% 0, 100% 100%, 47% 100%);
+    background-color: style(primary);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+
+    @include mobile {
+        clip-path: polygon(72% 0, 100% 0, 100% 100%, 47% 100%);
+        background: style(white-1);
+    }
+}
+#root{
+  height:100%;
+  width:100%;
+}
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:100%;
+  width:100%;
+}
+.card{
+  box-shadow:0 0.1rem 2rem 0 rgba(32, 33, 36, .28);
+  border-radius: 0.8rem 0.8rem;
+  width: 90%;
+  height: 80%;
+  display: flex;
+  @include mobile {
+    flex-direction: column;
+  }
+  &__left{
+    display: flex;
+    flex-basis: 100%;
+    height: 100%;
+    flex-direction: column;
+    flex-grow: 1;
+    font-family: 'JosefinSans-Bold';
+    &__header {
+        color:style(primary);
+        text-decoration: none;
+        padding: 5rem 0 0 5rem;
+        display: block;
+        font-size:1.8rem;
+    }
+    &__title{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 7rem;
+        color:style(primary);
+        @include mobile {
+          padding: 0;
+          h1{
+            font-size:5rem;
+            font-family: 'JosefinSans-Bold';
+          }
+          p{
+            font-size: 1.4rem;
+            font-family: 'JosefinSans-Bold';
+          }
+        }
+        h1{
+          font-size:7.2rem;
+          font-family: 'JosefinSans-Bold';
+        }
+        p{
+          font-size: 1.6rem;
+          font-family: 'JosefinSans-Bold';
+        }
+        h1,p{
+          padding:0;
+          margin:0;
+      }
+    }
+  }
+  &__right{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    flex-basis: 100%;
+    padding: 0 6rem 3rem 0;
+    @include mobile {
+      padding: 0;
+      justify-content: center;
+    }
+  }
+}
+
+.signinform{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__input{
+      width:100%;
+      display: flex;
+      justify-content: flex-end;
+      margin:1rem;
+      .MuiTextField-root{
+        width:60%;
+        .MuiInputLabel-animated,input{
+          color:style(white-1);
+          font-size: 1.2rem;
+        }
+        .MuiInput-underline::after, .MuiInput-underline::before{
+          border-bottom: 0.1rem solid style(white-1);
+        }
+      }
+      @include mobile {
+        justify-content: center;
+        .MuiTextField-root{
+          width:75%;
+          .MuiInputLabel-animated,input{
+            color:style(black-1);
+            font-size: 1.6rem;
+          }
+          .MuiInput-underline::after, .MuiInput-underline::before{
+            border-bottom: 0.1rem solid style(black-1);
+          }
+        }
+      }
+    }
+     &__action{
+        width:100%;
+        display: flex;
+        justify-content: flex-end;
+        margin:1rem;
+        .MuiButton-label{
+            font-size: 1.2rem;
+        }
+        &__password{
+            .MuiButton-label{
+                color: style(secondary);
+            }
+        }
+        &__login{
+          background: style(secondary) !important;
+          color: style(white-1) !important;
+          width:25%;
+        }
+        @include mobile {
+          justify-content: center;
+        }
+    }
+}
